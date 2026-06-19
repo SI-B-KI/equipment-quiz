@@ -1,0 +1,962 @@
+[
+  {
+    "id": "eq_central_key",
+    "topic": "Allgemeines",
+    "q": "Welche Bedeutung hat die Equipmentnummer laut Leitfaden?",
+    "options": [
+      "Sie ist nur für technische Systeme relevant",
+      "Sie ist die zentrale Kenngröße für alle technischen Systeme und Abwicklungsprozesse",
+      "Sie wird nur für Reportingzwecke in PowerBI verwendet"
+    ],
+    "a": 1,
+    "exp": "Im Leitfaden steht: Die Equipmentnummer ist die zentrale Kenngröße für technische Systeme und Abwicklungsprozesse (kaufmännisch und technisch)."
+  },
+  {
+    "id": "eq_responsible",
+    "topic": "Allgemeines",
+    "q": "Wer ist laut Leitfaden ausschließlich verantwortlich für Vergabe und Pflege von Equipments?",
+    "options": [
+      "Bid & Proposal Management (BPM)",
+      "RC-DE SI B PIT DQM",
+      "Der ausführende Techniker vor Ort"
+    ],
+    "a": 1,
+    "exp": "Der Leitfaden benennt RC-DE SI B PIT DQM als ausschließlich verantwortlich für Vergabe und Pflege von Equipments."
+  },
+  {
+    "id": "rules_mandatory",
+    "topic": "Allgemeines",
+    "q": "Für wen sind die Regeln dieses Leitfadens verpflichtend anzuwenden?",
+    "options": [
+      "Nur für den Vertrieb",
+      "Für alle am Prozess beteiligten Personen (Vertrieb, Ausführung, Service)",
+      "Nur für PIT DQM"
+    ],
+    "a": 1,
+    "exp": "Im Vorwort steht, dass die Regeln verpflichtend für alle am Prozess beteiligten Personen gelten (beginnend Vertrieb, Ausführung, Service)."
+  },
+  {
+    "id": "sales_no_mix_contracts",
+    "topic": "Sales",
+    "q": "Welche Grundregel gilt laut Leitfaden für Sales bezüglich Vertragsgestaltung?",
+    "options": [
+      "Es dürfen keine gewerkeübergreifenden Mischverträge erstellt werden",
+      "Mischverträge sind erlaubt, wenn Materialnummern stimmen",
+      "Mischverträge sind empfohlen, um weniger Hauptverträge zu haben"
+    ],
+    "a": 0,
+    "exp": "Kapitel 2.1: Es dürfen keine gewerkeübergreifenden Mischverträge erstellt werden."
+  },
+  {
+    "id": "sales_mix_consequence",
+    "topic": "Sales",
+    "q": "Warum ist das Mischen von Vertriebswegen laut Leitfaden problematisch?",
+    "options": [
+      "Es führt dazu, dass erbrachte Leistungen nicht abgerechnet/produktivi(e)rt werden können",
+      "Es erhöht nur die Anzahl der Equipmentnummern",
+      "Es betrifft nur die Dokumentation, nicht die Abrechnung"
+    ],
+    "a": 0,
+    "exp": "Kapitel 2.1: Mischen von Vertriebswegen führt dazu, dass erbrachte Leistungen nicht abgerechnet/produktivi(e)rt werden können."
+  },
+  {
+    "id": "sales_main_contract_needed",
+    "topic": "Sales",
+    "q": "Was folgt laut Leitfaden aus unterschiedlichen Vertriebswegen/Sparten (Beispiel FS20xx BSK vs FS20xx BMA)?",
+    "options": [
+      "Ein gemeinsamer Hauptvertrag reicht",
+      "Es ist jeweils ein eigenständiger Hauptvertrag notwendig",
+      "Es genügt ein zusätzlicher Untervertrag ohne neues Equipment"
+    ],
+    "a": 1,
+    "exp": "Kapitel 2.1: Für unterschiedliche Sparten/Vertriebswege ist jeweils ein eigenständiger Hauptvertrag notwendig."
+  },
+  {
+    "id": "sales_offer_structure",
+    "topic": "Sales",
+    "q": "Wie sollen im Wartungsangebot Equipmentnummern laut Leitfaden verwendet werden?",
+    "options": [
+      "Nur im internen Text ohne feste Syntax",
+      "Je Panel/Zentrale/Bedienfeld als eigene Gliederungsstufe, Equipmentnummer als Kurz/Langtext (EQ:xxxxxxx)",
+      "Nur als Anhang im PDF-Angebot"
+    ],
+    "a": 1,
+    "exp": "Kapitel 2.2: Je Panel/Zentrale/Bedienfeld eigene Gliederungsstufe; Equipment-Nummer als Kurz/Langtext (EQ:xxxxxxx)."
+  },
+  {
+    "id": "sales_separate_offers",
+    "topic": "Sales",
+    "q": "Was gilt laut Leitfaden je Technik/Sparte für SCT- oder (SAP) ELAN-Angebote?",
+    "options": [
+      "Ein Angebot pro Kunde reicht, auch wenn mehrere Sparten enthalten sind",
+      "Je Technik (Sparte) muss ein eigenes SCT- oder (SAP) ELAN-Angebot erstellt werden",
+      "Nur für Fire ist ein eigenes Angebot nötig"
+    ],
+    "a": 1,
+    "exp": "Kapitel 2.2: Je Technik (Sparte) muss ein eigenes SCT- oder (SAP) ELAN-Angebot erstellt werden."
+  },
+  {
+    "id": "fire_standalone",
+    "topic": "Fire Safety",
+    "q": "Wie ist laut Leitfaden die Equipmentanlage bei einer Stand-alone Zentrale zu gestalten?",
+    "options": [
+      "Kein Untervertrag nötig, nur Equipmentnummer",
+      "Für die Zentrale wird ein Untervertrag angelegt und eine Equipmentnummer vergeben",
+      "Es wird nur ein Hauptvertrag ohne Unterverträge genutzt"
+    ],
+    "a": 1,
+    "exp": "Kapitel 3.1: Bei Stand-alone Zentrale wird ein Untervertrag angelegt und eine Equipmentnummer vergeben."
+  },
+  {
+    "id": "fire_two_standalone",
+    "topic": "Fire Safety",
+    "q": "Wie ist laut Leitfaden bei zwei oder mehreren Stand-alone Zentralen vorzugehen?",
+    "options": [
+      "Je Zentrale ein Untervertrag und eine Equipmentnummer",
+      "Eine Equipmentnummer für alle Zentralen zusammen",
+      "Nur ein Untervertrag, aber mehrere Equipments ohne Nummern"
+    ],
+    "a": 0,
+    "exp": "Kapitel 3.2: Bei zwei oder mehreren Stand-alone Zentralen je Zentrale Untervertrag + Equipmentnummer."
+  },
+  {
+    "id": "fire_networked",
+    "topic": "Fire Safety",
+    "q": "Wie ist laut Leitfaden bei vernetzten Zentralen (Gesamtsystem) vorzugehen?",
+    "options": [
+      "Je Zentrale Untervertrag und Equipmentnummer",
+      "Nur für die Master-Zentrale ein Equipment",
+      "Nur ein Equipment für das gesamte Netz"
+    ],
+    "a": 0,
+    "exp": "Kapitel 3.3: Je Zentrale in vernetztem Gesamtsystem Untervertrag + Equipmentnummer."
+  },
+  {
+    "id": "panels_equipment",
+    "topic": "Fire Safety",
+    "q": "Welche Aussage zu Bedienfeldern/Netzbedienfeldern trifft laut Leitfaden zu?",
+    "options": [
+      "Für Netzbedienfelder sind grundsätzlich eigene Equipmentnummern zu vergeben",
+      "Netzbedienfelder teilen immer die Equipmentnummer der Zentrale",
+      "Bedienfelder erhalten nie eigene Equipmentnummern"
+    ],
+    "a": 0,
+    "exp": "Kapitel 3.6: Für Netzbedienfelder sind grundsätzlich eigene Equipmentnummern zu vergeben."
+  },
+  {
+    "id": "panels_fs20_rule",
+    "topic": "Fire Safety",
+    "q": "Wie lautet die Regel für FS20-Bedienfelder (FT2040/FT2080) laut Leitfaden?",
+    "options": [
+      "Je FS20-Bedienfeld als eigenständiger Teilnehmer eine Equipmentnummer, unabhängig vom Einbauort",
+      "Nur pro Gebäude eine Equipmentnummer für alle Bedienfelder",
+      "Nur wenn ein Wartungsvertrag existiert, gibt es eine Equipmentnummer"
+    ],
+    "a": 0,
+    "exp": "Kapitel 3.6: Je FS20-Bedienfeld (FT2040/FT2080) als eigenständiger Teilnehmer eine Equipmentnummer, unabhängig vom Einbauort."
+  },
+  {
+    "id": "panels_sigmasys_rule",
+    "topic": "Fire Safety",
+    "q": "Wie lautet die Regel für SIGMASYS-Netzbedienfelder laut Leitfaden?",
+    "options": [
+      "Je abgesetztes, eigenständiges SOP-BF/DT1000 eine Equipmentnummer",
+      "Alle SOP-BF teilen immer eine gemeinsame Equipmentnummer",
+      "SIGMASYS nutzt keine Equipmentnummern für Bedienfelder"
+    ],
+    "a": 0,
+    "exp": "Kapitel 3.6: Bei SIGMASYS-Systemen je abgesetztes, eigenständiges SOP-BF/DT1000 eine Equipmentnummer."
+  },
+  {
+    "id": "extinguish_two_equis",
+    "topic": "Fire Safety",
+    "q": "Welche Aussage gilt laut Leitfaden für Löschanlagen (Kapitel 3.7)?",
+    "options": [
+      "Es werden zwei Equipments benötigt: Branderkennungsteil und Löschteil pro Löschanlage",
+      "Es wird nur ein Equipment für die gesamte Löschanlage benötigt",
+      "Es werden immer drei Equipments benötigt (wie bei X100 früher)"
+    ],
+    "a": 0,
+    "exp": "Kapitel 3.7: Generell werden zwei Equipments benötigt – Branderkennungsteil und Löschteil – pro Löschanlage."
+  },
+  {
+    "id": "digital_fire_services",
+    "topic": "Fire Safety",
+    "q": "Benötigen digitale Fire Safety Services laut Leitfaden ein gesondertes Equipment?",
+    "options": [
+      "Ja, immer ein eigenes Equipment",
+      "Nein, Leistungen werden dem technischen Equipment der Zentrale zugeordnet",
+      "Nur bei mehreren Zentralen ist ein eigenes Equipment nötig"
+    ],
+    "a": 1,
+    "exp": "Kapitel 3.9: Für digitale Fire Safety Services ist kein gesondertes Equipment notwendig; Zuordnung zur Zentrale."
+  },
+  {
+    "id": "digital_fire_no_bundle",
+    "topic": "Fire Safety",
+    "q": "Was ist laut Leitfaden bei mehreren Zentralen in Bezug auf digitale Fire Services zulässig?",
+    "options": [
+      "Sammel- oder Verbundpositionen sind zulässig",
+      "Digitale Fire Services sind zu jeder Zentrale zuzuordnen; Sammel-/Verbundpositionen sind nicht zulässig",
+      "Digitale Fire Services werden immer nur dem Hauptvertrag zugeordnet"
+    ],
+    "a": 1,
+    "exp": "Kapitel 3.9: Bei mehreren Zentralen sind digitale Fire Services jeder Zentrale zuzuordnen; Sammel-/Verbundpositionen sind nicht zulässig."
+  },
+  {
+    "id": "connect_infra_object",
+    "topic": "Basiskonnektivität",
+    "q": "Welche Objektart ist laut Leitfaden dem Untervertrag für die cRSP-Onboarding-Variante (Hard-/Softwarelösung) zuzuordnen?",
+    "options": [
+      "00 Connect Infrastruktur",
+      "00 Connect Service",
+      "00 Navaccount"
+    ],
+    "a": 0,
+    "exp": "Kapitel 10: Untervertrag Konnektivität HW/SW erhält ein Equipment mit Objektart „00 Connect Infrastruktur“.'"
+  },
+  {
+    "id": "connect_service_object",
+    "topic": "Basiskonnektivität",
+    "q": "Welche Objektart ist laut Leitfaden der Remote-Dienstleistung (Remote Assistance/Remote Essential) zuzuordnen?",
+    "options": [
+      "00 Connect Infrastruktur",
+      "00 Connect Service",
+      "00 Building X"
+    ],
+    "a": 1,
+    "exp": "Kapitel 10: Remote-Dienstleistungen erhalten separaten Untervertrag mit Equipment Objektart „00 Connect Service“."
+  },
+  {
+    "id": "connect_one_infra",
+    "topic": "Basiskonnektivität",
+    "q": "Wie viele „00 Connect Infrastruktur“-Equipments sind pro Kunde/Standort und Aufschaltung (je Sparte/Vertriebsweg) grundsätzlich anzulegen?",
+    "options": [
+      "Genau einmal",
+      "Beliebig viele",
+      "Keines – nur Services benötigen Equipment"
+    ],
+    "a": 0,
+    "exp": "Kapitel 10: Pro Kunde/Standort und Aufschaltung je Sparte/Vertriebsweg nur einmal ein Untervertrag mit Equipment „00 Connect Infrastruktur“."
+  },
+  {
+    "id": "connect_multi_trades",
+    "topic": "Basiskonnektivität",
+    "q": "Was sagt der Leitfaden zur Aufschaltung mehrerer Gewerke (Fire/Security/Comfort) über eine gemeinsame Konnektivität?",
+    "options": [
+      "Ist vorgesehen und empfohlen",
+      "Ist nicht vorgesehen",
+      "Ist nur bei Remote Essential erlaubt"
+    ],
+    "a": 1,
+    "exp": "Kapitel 10: Aufschaltung mehrerer Gewerke über eine gemeinsame Konnektivität ist nicht vorgesehen."
+  },
+  {
+    "id": "remote_assistance_contract",
+    "topic": "Basiskonnektivität",
+    "q": "Welche Aussage zu Remote Assistance trifft laut Leitfaden zu?",
+    "options": [
+      "Remote Assistance steht ausschließlich Kunden mit Instandhaltungsvertrag und/oder bestimmten Verträgen zur Verfügung",
+      "Remote Assistance steht allen Kunden ohne Vertrag zur Verfügung",
+      "Remote Assistance ist identisch mit Remote Essential"
+    ],
+    "a": 0,
+    "exp": "Kapitel 10: Hinweis, dass Remote Assistance nur Kunden mit Instandhaltungsvertrag und/oder bestimmten Verträgen zur Verfügung steht."
+  },
+  {
+    "id": "remote_essential_use",
+    "topic": "Basiskonnektivität",
+    "q": "Wofür ist Remote Essential laut Leitfaden gedacht?",
+    "options": [
+      "Für Kunden ohne Vertragsverhältnis zur Inanspruchnahme von Remote Services",
+      "Für alle Vertragskunden als Standard",
+      "Nur für Fire-Sparte"
+    ],
+    "a": 0,
+    "exp": "Kapitel 10.2: Remote Essential Paket steht Kunden ohne Vertragsverhältnis zur Inanspruchnahme von Remote Services bereit."
+  },
+  {
+    "id": "remote_essential_equi",
+    "topic": "Basiskonnektivität",
+    "q": "Welches Equipment wird laut Leitfaden für den Remote Essential Vertrag angelegt?",
+    "options": [
+      "Connect Infrastruktur",
+      "Connect Service",
+      "Service Desk"
+    ],
+    "a": 1,
+    "exp": "Kapitel 10.2: Für den Remote Essential Vertrag wird ein Equipment „Connect Service“ angelegt."
+  },
+  {
+    "id": "concession_transmitter",
+    "topic": "Konzession / SISE",
+    "q": "Was gilt laut Leitfaden für die Konzession/SISE-Aufschaltung bezüglich Equipmentanlagen?",
+    "options": [
+      "Für jede Übertragungseinrichtung ist ein Equipment anzulegen; für jede weitere Teilmeldestelle zusätzlich ein eigenes Equipment",
+      "Nur ein Equipment pro Kunde unabhängig von Übertragungseinrichtungen",
+      "Equipments werden hier nicht benötigt"
+    ],
+    "a": 0,
+    "exp": "Kapitel 4: Für jede Übertragungseinrichtung Equipment; für jede weitere Teilmeldestelle zusätzlich ein eigenes Equipment."
+  },
+  {
+    "id": "managed_service_obj",
+    "topic": "Managed Service",
+    "q": "Welche Objektart wird laut Leitfaden dem Untervertrag für Managed Service (z.B. Service Desk Essential) zugeordnet?",
+    "options": [
+      "00 Service Desk",
+      "00 Building X",
+      "00 Connect Service"
+    ],
+    "a": 0,
+    "exp": "Kapitel 12: Managed Services werden in separatem Untervertrag geführt; Objektart „00 Service Desk“."
+  },
+  {
+    "id": "doc_status",
+    "topic": "Allgemeines",
+    "q": "Welche Aussage beschreibt die Bedeutung der „Richtlinie zur Vergabe von Equipmentnummern“ laut Leitfaden am treffendsten?",
+    "options": [
+      "Sie ist nur für Reporting relevant",
+      "Sie ist Datenqualitätsgrundlage für nahezu alle Prozesse und die Digitalisierung",
+      "Sie ist nur für SAP-Stammdaten ohne Prozessbezug"
+    ],
+    "a": 1,
+    "exp": "Im Vorwort wird sie als Datenqualitätsgrundlage für nahezu alle Prozesse und die Digitalisierung beschrieben."
+  },
+  {
+    "id": "doc_scope_roles",
+    "topic": "Allgemeines",
+    "q": "Für welche Prozessphasen sind die Regeln des Leitfadens verpflichtend anzuwenden?",
+    "options": [
+      "Nur für den Service",
+      "Vertrieb, Ausführung und Service",
+      "Nur für die Ausführung"
+    ],
+    "a": 1,
+    "exp": "Im Vorwort: Regeln sind durch alle am Prozess beteiligten Personen anzuwenden – beginnend beim Vertrieb, in der Ausführung und ebenso im Service."
+  },
+  {
+    "id": "usecase_remote_services",
+    "topic": "Allgemeines",
+    "q": "Welcher Use Case wird im Leitfaden für „Remoteservices“ genannt?",
+    "options": [
+      "Nur lokale Wartung ohne Zugriff",
+      "Wartungsvorbereitung, Unterstützung, Störungsbeseitigung und Abrechnung via RMS über cRSP",
+      "Ausschließlich Modernisierungskampagnen"
+    ],
+    "a": 1,
+    "exp": "Use Cases: Remoteservices umfassen u.a. Wartungsvorbereitung und Störungsbeseitigung; Zugriffe über cRSP-Verbindung; Abrechnung durch RMS."
+  },
+  {
+    "id": "usecase_monitoring",
+    "topic": "Allgemeines",
+    "q": "Wofür wird „Monitoring/SPM“ laut Leitfaden eingesetzt?",
+    "options": [
+      "Automatisierte Ticket-/Störauftragserzeugung und Reporting für SLA-Management",
+      "Manuelle Excel-Auswertung ohne Automatisierung",
+      "Nur für die Vertragsarchivierung"
+    ],
+    "a": 0,
+    "exp": "Use Cases: Monitoring/SPM: automatisierte Ticket-/Störauftragserzeugung, Reporting für Serviceplattform und SLA-Management."
+  },
+  {
+    "id": "usecase_modernisierung",
+    "topic": "Allgemeines",
+    "q": "Welche Empfehlung gibt der Leitfaden bei Modernisierungen mit längerem Parallelbetrieb (≥ 3 Monate)?",
+    "options": [
+      "Bestehende Equipments müssen immer zwingend weiterverwendet werden",
+      "Vorzugsweise neue Equipments anlegen",
+      "Equipments sind im Parallelbetrieb grundsätzlich verboten"
+    ],
+    "a": 1,
+    "exp": "Use Cases: Bei längerem Parallelbetrieb von Neu- und Bestandssystemen (≥3 Monate) sind vorzugsweise neue Equipments anzulegen."
+  },
+  {
+    "id": "definition_equipment_smallest",
+    "topic": "Allgemeines",
+    "q": "Was ist laut Leitfaden die kleinste einzeln beplanbare Einheit für die Instandhaltung?",
+    "options": [
+      "Der Hauptvertrag",
+      "Das Equipment",
+      "Der Standort"
+    ],
+    "a": 1,
+    "exp": "Definition Equipment: „Dieses Equipment ist die kleinste einzeln beplanbare Einheit für die Instandhaltung.“"
+  },
+  {
+    "id": "definition_stueckliste",
+    "topic": "Allgemeines",
+    "q": "Welche Aussage zur Stückliste trifft laut Leitfaden zu?",
+    "options": [
+      "Eine Stückliste gehört nicht zum Equipment",
+      "Zu einem Equipment gehört eine Stückliste, die das installierte Material umfasst",
+      "Stücklisten sind nur für Managed Services relevant"
+    ],
+    "a": 1,
+    "exp": "Definition Equipment: „Zu einem Equipment gehört eine Stückliste, die das installierte Material umfasst.“"
+  },
+  {
+    "id": "responsibility_dqm_only",
+    "topic": "Allgemeines",
+    "q": "Wer ist laut Leitfaden ausschließlich verantwortlich für die Vergabe und Pflege von Equipments?",
+    "options": [
+      "RC-DE SI B PIT DQM",
+      "Bid & Proposal Management (BPM)",
+      "Die Niederlassungsleitung"
+    ],
+    "a": 0,
+    "exp": "Kapitel 1.1: Verantwortlich für Vergabe und Pflege ist ausschließlich RC-DE SI B PIT DQM."
+  },
+  {
+    "id": "sales_equipment_in_offer",
+    "topic": "Sales",
+    "q": "Wie soll die Equipment-Nummer laut Leitfaden im Wartungsangebot angegeben werden?",
+    "options": [
+      "Als Kurz-/Langtext in der jeweiligen Gliederungsstufe (EQ:xxxxxxx)",
+      "Nur in einer separaten E-Mail an PIT DQM",
+      "Nur als Screenshot in der Angebotsanlage"
+    ],
+    "a": 0,
+    "exp": "Kapitel 2.2: In der Gliederungsstufe ist die Equipment-Nummer als Kurz/Langtext anzugeben (EQ:xxxxxxx)."
+  },
+  {
+    "id": "sales_connectivity_stage",
+    "topic": "Sales",
+    "q": "Wie ist Konnektivität (cRSP) im Angebot laut Leitfaden zu behandeln?",
+    "options": [
+      "Muss als eigene Gliederungsstufe angelegt sein (ausnahmsweise im Int. Text möglich)",
+      "Darf nie erwähnt werden",
+      "Wird automatisch aus SAP gezogen und muss nicht angelegt werden"
+    ],
+    "a": 0,
+    "exp": "Kapitel 2.2: Konnektivität (cRSP) muss als eigene Gliederungsstufe angelegt sein; ausnahmsweise im Int. Text gem. Beispiel."
+  },
+  {
+    "id": "sales_digital_services_stage",
+    "topic": "Sales",
+    "q": "Was gilt laut Leitfaden für digitale Services (Navigator, Building X, Managed Services) im Angebot?",
+    "options": [
+      "Jeweils eigene Gliederungsstufe anlegen",
+      "Immer in derselben Gliederungsstufe wie BMA",
+      "Nie als Gliederungsstufe, nur als Kommentar"
+    ],
+    "a": 0,
+    "exp": "Kapitel 2.2: Für digitale Services und Managed Services ist im Angebot jeweils eine eigene Gliederungsstufe anzulegen."
+  },
+  {
+    "id": "fire_delete_topic",
+    "topic": "Fire Safety",
+    "q": "Welche Aussage entspricht dem Kapitelaufbau im Leitfaden für Fire Safety?",
+    "options": [
+      "Kapitel 3 enthält u.a. Stand Alone, Vernetzung, Bedienfelder und Löschen",
+      "Fire Safety ist nur in Kapitel 10 beschrieben",
+      "Fire Safety hat keine Unterkapitel"
+    ],
+    "a": 0,
+    "exp": "Inhaltsverzeichnis zeigt Kapitel 3 Brandmeldetechnik mit Unterkapiteln wie Stand Alone, Vernetzte Anlagen, Bedienfelder, Löschen."
+  },
+  {
+    "id": "fire_ela",
+    "topic": "Fire Safety",
+    "q": "Wie werden Sprachalarmanlagen/ELA-Anlagen laut Leitfaden in Bezug auf Equipment behandelt?",
+    "options": [
+      "Je Sprachalarmanlage Untervertrag und Equipment (bei Modernisierungen beachten)",
+      "Nie Equipment anlegen",
+      "Nur Sammel-Equipment pro Kunde"
+    ],
+    "a": 0,
+    "exp": "Kapitel 3.8: Je Sprachalarmanlage wird ein Untervertrag und jeweils ein Equipment angelegt."
+  },
+  {
+    "id": "konz_equipment",
+    "topic": "Konzession / SISE",
+    "q": "Was gilt laut Leitfaden für Konzession/SISE-Aufschaltung?",
+    "options": [
+      "Für jede Übertragungseinrichtung ein Equipment; für jede weitere Teilmeldestelle zusätzlich ein eigenes Equipment",
+      "Nur ein Equipment pro Kunde unabhängig von Teilmeldestellen",
+      "Equipments werden nur bei Video benötigt"
+    ],
+    "a": 0,
+    "exp": "Kapitel 4: Für jede Übertragungseinrichtung Equipment; jede weitere Teilmeldestelle zusätzlich eigenes Equipment."
+  },
+  {
+    "id": "auto_zahlbar_flag",
+    "topic": "Automation",
+    "q": "Wann kann ein Equipment laut Leitfaden als „aufschaltbar“ gewertet und mit cRSP-Flag „zählbar“ gemacht werden?",
+    "options": [
+      "Wenn es über cRSP erreichbar ist und vertraglich fernunterstützte Leistungen beinhaltet",
+      "Immer, sobald es im Asset Explorer erscheint",
+      "Nur wenn es ein FS20-Bedienfeld ist"
+    ],
+    "a": 0,
+    "exp": "Kapitel 5: Wenn ein Gerät über cRSP erreichbar ist und ein Untervertrag inkl. fernunterstützter Leistungen zugeordnet ist, kann es als aufschaltbar gelten und „zählbar“ gemacht werden."
+  },
+  {
+    "id": "auto_flags_set_by",
+    "topic": "Automation",
+    "q": "Wer setzt laut Leitfaden RSC-Flag, cRSP-Flag und ggf. Remote Essential-Flag nach erfolgreicher Inbetriebnahme?",
+    "options": [
+      "Das DSC zentral",
+      "Der Techniker vor Ort",
+      "Der Kunde über das Portal"
+    ],
+    "a": 0,
+    "exp": "Kapitel 5: Flags werden zentral durch das DSC gesetzt, nach erfolgreicher Inbetriebnahme."
+  },
+  {
+    "id": "auto_upload_import",
+    "topic": "Automation",
+    "q": "Wie werden Merkmalbezeichnungen und Werte (z.B. Equipmentklasse) laut Leitfaden gepflegt?",
+    "options": [
+      "Zyklisch und zentral über einen Upload importiert; Equipmentklasse wird dabei automatisch erzeugt",
+      "Manuell durch den Techniker im Tool",
+      "Per E-Mail an die Niederlassung"
+    ],
+    "a": 0,
+    "exp": "Kapitel 5: Merkmalbezeichnungen/Werte werden zyklisch und zentral über Upload importiert; dabei wird Equipmentklasse automatisch erzeugt."
+  },
+  {
+    "id": "conn_hw_sw_contract",
+    "topic": "Basiskonnektivität",
+    "q": "Welche Objektart ist dem Untervertrag „Konnektivität HW/SW“ laut Leitfaden zuzuordnen?",
+    "options": [
+      "00 Connect Infrastruktur",
+      "00 Connect Service",
+      "00 Service Desk"
+    ],
+    "a": 0,
+    "exp": "Kapitel 10: cRSP-Onboarding-Variante via Hard-/Softwarelösung erhält Equipment Objektart „00 Connect Infrastruktur“."
+  },
+  {
+    "id": "conn_remote_contract",
+    "topic": "Basiskonnektivität",
+    "q": "Welche Objektart ist dem Untervertrag „Remote-Dienstleistung“ laut Leitfaden zuzuordnen?",
+    "options": [
+      "00 Connect Service",
+      "00 Connect Infrastruktur",
+      "00 Navaccount"
+    ],
+    "a": 0,
+    "exp": "Kapitel 10: Remote-Dienstleistungen erhalten separaten Untervertrag mit Objektart „00 Connect Service“."
+  },
+  {
+    "id": "conn_multi_onboarding",
+    "topic": "Basiskonnektivität",
+    "q": "Was passiert laut Leitfaden, wenn aus technischen/organisatorischen Gründen mehrere Aufschaltungen gleicher Sparte realisiert werden?",
+    "options": [
+      "Anzahl „Connect Infrastruktur“ erhöht sich entsprechend der tatsächlich umgesetzten Aufschaltungen",
+      "Es bleibt immer bei genau einem „Connect Infrastruktur“",
+      "Es wird ausschließlich „Connect Service“ angelegt"
+    ],
+    "a": 0,
+    "exp": "Kapitel 10: Bei mehreren Aufschaltungen erhöht sich die Anzahl der Equipments „Connect Infrastruktur“ inkl. Unterverträge entsprechend."
+  },
+  {
+    "id": "conn_no_multi_trade_shared",
+    "topic": "Basiskonnektivität",
+    "q": "Welche Aussage trifft laut Leitfaden zur Aufschaltung mehrerer Gewerke über eine gemeinsame Konnektivität zu?",
+    "options": [
+      "Ist nicht vorgesehen",
+      "Ist Standard und empfohlen",
+      "Ist nur für Remote Essential erlaubt"
+    ],
+    "a": 0,
+    "exp": "Kapitel 10: Aufschaltung mehrerer Gewerke über eine gemeinsame Konnektivität ist nicht vorgesehen."
+  },
+  {
+    "id": "conn_remote_assistance_condition",
+    "topic": "Basiskonnektivität",
+    "q": "Unter welcher Bedingung steht Remote-Assistance laut Leitfaden grundsätzlich zur Verfügung?",
+    "options": [
+      "Nur für Kunden mit Instandhaltungsvertrag und/oder bestimmten Verträgen (z.B. SIPORT/Video/Desigo Uptime)",
+      "Für Kunden ohne Vertrag als Standard",
+      "Nur im Offlinemodus"
+    ],
+    "a": 0,
+    "exp": "Kapitel 10: Remote-Assistance steht ausschließlich Kunden mit Instandhaltungsvertrag und/oder bestimmten Verträgen zur Verfügung."
+  },
+  {
+    "id": "conn_remote_essential_only",
+    "topic": "Basiskonnektivität",
+    "q": "Wann ist laut Leitfaden „Remote Essential“ die einzige wählbare Variante?",
+    "options": [
+      "Wenn der Kunde keinen Instandhaltungs- oder Uptime-Vertrag besitzt",
+      "Wenn der Kunde zwei Hauptverträge hat",
+      "Wenn der Kunde ein Managementsystem nutzt"
+    ],
+    "a": 0,
+    "exp": "Kapitel 10: Besitzt der Kunde keinen Instandhaltungs- oder Uptime-Vertrag, ist ausschließlich Remote Essential wählbar."
+  },
+  {
+    "id": "conn_remote_essential_contract",
+    "topic": "Basiskonnektivität",
+    "q": "Wofür steht das Remote Essential Paket laut Leitfaden?",
+    "options": [
+      "Für Kunden ohne Vertragsverhältnis zur Inanspruchnahme von Remote Services",
+      "Nur für Vertragskunden",
+      "Nur für Fire Safety Services"
+    ],
+    "a": 0,
+    "exp": "Kapitel 10.2: Remote Essential Paket steht Kunden ohne Vertragsverhältnis zur Inanspruchnahme von Remote Services bereit."
+  },
+  {
+    "id": "conn_remote_essential_equipment",
+    "topic": "Basiskonnektivität",
+    "q": "Welches Equipment wird für den Remote Essential Vertrag laut Leitfaden angelegt?",
+    "options": [
+      "Connect Service",
+      "Connect Infrastruktur",
+      "Navaccount"
+    ],
+    "a": 0,
+    "exp": "Kapitel 10.2: Für den Remote Essential Vertrag wird ein Equipment „Connect Service“ angelegt."
+  },
+  {
+    "id": "digi_navaccount",
+    "topic": "Digitale Dienste & Services",
+    "q": "Wie ist laut Leitfaden der Navigator-Untervertrag (Navaccount) je Hauptvertrag zu handhaben?",
+    "options": [
+      "Je Hauptvertrag ist ein Untervertrag für Navigator anzulegen; mehrere Services können zusammengefasst werden",
+      "Navigator wird nie als Untervertrag geführt",
+      "Nur ein Navaccount für alle Hauptverträge eines Kunden"
+    ],
+    "a": 0,
+    "exp": "Kapitel 11.1: Je Hauptvertrag Untervertrag für Navigator; mehrere Services können in einem Untervertrag zusammengefasst werden."
+  },
+  {
+    "id": "digi_navaccount_object",
+    "topic": "Digitale Dienste & Services",
+    "q": "Welche Objektart wird dem Navigator-Untervertrag laut Leitfaden zugeordnet?",
+    "options": [
+      "00 Navaccount",
+      "00 Building X",
+      "00 Connect Service"
+    ],
+    "a": 0,
+    "exp": "Kapitel 11.1: Dem Untervertrag wird ein Equipment mit Objektart 00 Navaccount zugeordnet."
+  },
+  {
+    "id": "digi_buildingx",
+    "topic": "Digitale Dienste & Services",
+    "q": "Welche Aussage beschreibt Building X laut Leitfaden am besten?",
+    "options": [
+      "KI-gestützte Anwendungen sowie Plattform- und Konnektivitätsdienste",
+      "Reines Offline-Tool ohne Cloud",
+      "Nur ein Hardware-Gateway"
+    ],
+    "a": 0,
+    "exp": "Kapitel 11.2: Building X umfasst KI-gestützte Anwendungen sowie Plattform- und Konnektivitätsdienste."
+  },
+  {
+    "id": "digi_buildingx_object",
+    "topic": "Digitale Dienste & Services",
+    "q": "Welche Objektart wird einem Building X-Untervertrag laut Leitfaden zugeordnet?",
+    "options": [
+      "00 Building X",
+      "00 Navaccount",
+      "00 Service Desk"
+    ],
+    "a": 0,
+    "exp": "Kapitel 11.2: Einem Untervertrag wird ein Equipment mit Objektart 00 Building X zugeordnet."
+  },
+  {
+    "id": "digi_avr",
+    "topic": "Digitale Dienste & Services",
+    "q": "Wie wird der Asset und Vulnerability Report (AVR) im Leitfaden hinsichtlich Equipment/Untervertrag beschrieben?",
+    "options": [
+      "Immer eigenes Equipment und eigener Untervertrag; bei mehreren Standorten pro Standort jeweils ein eigenes",
+      "Immer im Navaccount-Untervertrag enthalten",
+      "AVR benötigt keine Equipments"
+    ],
+    "a": 0,
+    "exp": "Kapitel 11.3: Für AVR immer eigenes Equipment und Untervertrag; bei mehreren Standorten jeweils pro Standort."
+  },
+  {
+    "id": "digi_avr_object",
+    "topic": "Digitale Dienste & Services",
+    "q": "Welche Objektart wird dem AVR-Untervertrag laut Leitfaden zugeordnet?",
+    "options": [
+      "00 CSS AVR",
+      "00 Building X",
+      "00 Connect Infrastruktur"
+    ],
+    "a": 0,
+    "exp": "Kapitel 11.3: Dem Untervertrag wird ein Equipment mit Objektart 00 CSS AVR zugeordnet."
+  },
+  {
+    "id": "ms_definition",
+    "topic": "Managed Service",
+    "q": "Welche Portfolioelemente werden laut Leitfaden unter „Managed Service“ verstanden?",
+    "options": [
+      "Uptime Portfolioelemente, modularer DMA sowie Service Desk Essential",
+      "Nur Fire Safety Services",
+      "Nur reine Hardwarewartung"
+    ],
+    "a": 0,
+    "exp": "Kapitel 12: Managed Service umfasst u. a. Uptime, DMA sowie Service Desk Essential."
+  },
+  {
+    "id": "ms_separate_contract",
+    "topic": "Managed Service",
+    "q": "Wie werden Managed Services laut Leitfaden vertragsseitig geführt?",
+    "options": [
+      "In einem separaten Untervertrag",
+      "Immer im Hauptvertrag ohne Untervertrag",
+      "Nur als Notiz im Angebot"
+    ],
+    "a": 0,
+    "exp": "Kapitel 12: Alle Managed Services werden in einem separaten Untervertrag angelegt."
+  },
+  {
+    "id": "ms_object",
+    "topic": "Managed Service",
+    "q": "Welche Objektart wird dem Untervertrag für Managed Service laut Leitfaden zugeordnet?",
+    "options": [
+      "00 Service Desk",
+      "00 Connect Service",
+      "00 Building X"
+    ],
+    "a": 0,
+    "exp": "Kapitel 12: Dem Untervertrag wird ein Equipment mit der Objektart „00 Service Desk“ zugeordnet."
+  },
+  {
+    "id": "toc_ch10",
+    "topic": "Allgemeines",
+    "q": "Welches Kapitel behandelt „Basiskonnektivität“ laut Inhaltsverzeichnis?",
+    "options": [
+      "Kapitel 10",
+      "Kapitel 3",
+      "Kapitel 12"
+    ],
+    "a": 0,
+    "exp": "Im Inhaltsverzeichnis ist „Basiskonnektivität“ als Kapitel 10 aufgeführt."
+  },
+  {
+    "id": "toc_ch12",
+    "topic": "Allgemeines",
+    "q": "Welches Kapitel behandelt „Managed Service“ laut Inhaltsverzeichnis?",
+    "options": [
+      "Kapitel 12",
+      "Kapitel 2",
+      "Kapitel 6"
+    ],
+    "a": 0,
+    "exp": "Im Inhaltsverzeichnis ist „Managed Service“ als Kapitel 12 aufgeführt."
+  },
+  {
+    "id": "toc_ch7",
+    "topic": "Allgemeines",
+    "q": "Welches Kapitel behandelt „Zutrittskontrolle“ laut Inhaltsverzeichnis?",
+    "options": [
+      "Kapitel 7",
+      "Kapitel 8",
+      "Kapitel 5"
+    ],
+    "a": 0,
+    "exp": "Im Inhaltsverzeichnis ist „Zutrittskontrolle“ als Kapitel 7 aufgeführt."
+  },
+  {
+    "id": "toc_ch8",
+    "topic": "Allgemeines",
+    "q": "Welches Kapitel behandelt „Video“ laut Inhaltsverzeichnis?",
+    "options": [
+      "Kapitel 8",
+      "Kapitel 9",
+      "Kapitel 11"
+    ],
+    "a": 0,
+    "exp": "Im Inhaltsverzeichnis ist „Video“ als Kapitel 8 aufgeführt."
+  },
+  {
+    "id": "toc_ch9",
+    "topic": "Allgemeines",
+    "q": "Welches Kapitel behandelt „Einbruchmeldetechnik“ laut Inhaltsverzeichnis?",
+    "options": [
+      "Kapitel 9",
+      "Kapitel 4",
+      "Kapitel 1"
+    ],
+    "a": 0,
+    "exp": "Im Inhaltsverzeichnis ist „Einbruchmeldetechnik“ als Kapitel 9 aufgeführt."
+  },
+  {
+    "id": "sales_wrike",
+    "topic": "Sales",
+    "q": "Über welchen Prozess erfolgt laut Leitfaden die Equipment-Anforderung für Sales/Execution/Service?",
+    "options": [
+      "Über Works:Collaborate (Wrike) Prozess",
+      "Per Telefon an den Kunden",
+      "Über Findus-Report"
+    ],
+    "a": 0,
+    "exp": "Kapitel 2: Die Equipment-Anforderung erfolgt über den standardisierten Works:Collaborate (Wrike) Prozess."
+  },
+  {
+    "id": "fire_digital_no_extra_equi",
+    "topic": "Fire Safety",
+    "q": "Welche Aussage gilt laut Leitfaden für digitale Fire Safety Services?",
+    "options": [
+      "Kein gesondertes Equipment notwendig; Zuordnung zum technischen Equipment der Zentrale",
+      "Immer eigenes Equipment „Digital Fire“ anlegen",
+      "Nur bei einer Zentrale gesondertes Equipment"
+    ],
+    "a": 0,
+    "exp": "Kapitel 3.9: Kein gesondertes Equipment notwendig; Leistungen werden dem technischen Equipment der Zentrale zugeordnet."
+  },
+  {
+    "id": "fire_digital_no_bundle",
+    "topic": "Fire Safety",
+    "q": "Was ist laut Leitfaden bei digitalen Fire Services in Bezug auf Sammelpositionen zulässig?",
+    "options": [
+      "Sammel- oder Verbundpositionen sind nicht zulässig",
+      "Sammelpositionen sind empfohlen",
+      "Sammelpositionen sind nur bei 2-n Hauptverträgen zulässig"
+    ],
+    "a": 0,
+    "exp": "Kapitel 3.9: Sammel- oder Verbundpositionen sind nicht zulässig."
+  },
+  {
+    "id": "equip_not_contract_dependent",
+    "topic": "Allgemeines",
+    "q": "Ist eine vertragliche Beziehung Voraussetzung dafür, dass ein Equipment existiert?",
+    "options": [
+      "Ja, ohne Vertrag kein Equipment",
+      "Nein, es ist unerheblich ob vertragliche Beziehung besteht",
+      "Nur bei Remote Services"
+    ],
+    "a": 1,
+    "exp": "Definition Equipment: Es ist unerheblich, ob für ein Equipment eine vertragliche Beziehung besteht."
+  },
+  {
+    "id": "equip_system_breakdown",
+    "topic": "Allgemeines",
+    "q": "Warum sollen vernetzte Systeme laut Leitfaden in einzelne Equipments aufgelöst werden?",
+    "options": [
+      "Damit im Remotefall auf das jeweilige Equipment zugegriffen und Vertragsstatus bewertet werden kann",
+      "Damit weniger Unterverträge entstehen",
+      "Damit keine Stückliste gepflegt werden muss"
+    ],
+    "a": 0,
+    "exp": "Definition Equipment: Systeme sind nach Equipments aufzulösen, damit im Remotefall auf jeweiliges Equipment zugegriffen werden kann und Leistungsart bewertet werden kann."
+  },
+  {
+    "id": "auto_cloud_sparte",
+    "topic": "Automation",
+    "q": "Welche Sparte erhält eine cloudbasierte Desigo CC as a Service laut Leitfaden?",
+    "options": [
+      "XB",
+      "FS",
+      "IM"
+    ],
+    "a": 0,
+    "exp": "Kapitel 5.1: Cloudbasierte Desigo CC as a Service erhält die Sparte „XB“."
+  },
+  {
+    "id": "doc_version",
+    "topic": "Allgemeines",
+    "q": "Welche Version trägt der Leitfaden im Dokumentenstand (Ausgabestand)?",
+    "options": [
+      "2.0",
+      "1.5",
+      "3.0"
+    ],
+    "a": 0,
+    "exp": "In der Dokumentenhistorie ist Version 2.0 mit Datum 16.03.2026 als aktuelle Überarbeitung aufgeführt."
+  },
+  {
+    "id": "doc_date",
+    "topic": "Allgemeines",
+    "q": "Welches Datum ist im Leitfaden als Ausgabestand angegeben?",
+    "options": [
+      "16.03.2026",
+      "01.12.2024",
+      "14.03.2019"
+    ],
+    "a": 0,
+    "exp": "Dokumentenhistorie: Version 2.0 datiert auf 16.03.2026."
+  },
+  {
+    "id": "toc_auto",
+    "topic": "Allgemeines",
+    "q": "Welches Kapitel behandelt „Gebäudeautomation (Automation)“ laut Inhaltsverzeichnis?",
+    "options": [
+      "Kapitel 5",
+      "Kapitel 6",
+      "Kapitel 1"
+    ],
+    "a": 0,
+    "exp": "Im Inhaltsverzeichnis ist „Gebäudeautomation (Automation)“ als Kapitel 5 aufgeführt."
+  },
+  {
+    "id": "toc_mgmt",
+    "topic": "Allgemeines",
+    "q": "Welches Kapitel behandelt „Managementsysteme“ laut Inhaltsverzeichnis?",
+    "options": [
+      "Kapitel 6",
+      "Kapitel 11",
+      "Kapitel 4"
+    ],
+    "a": 0,
+    "exp": "Im Inhaltsverzeichnis ist „Managementsysteme“ als Kapitel 6 aufgeführt."
+  },
+  {
+    "id": "toc_digital",
+    "topic": "Allgemeines",
+    "q": "Welches Kapitel behandelt „Digitale Dienste und Services“ laut Inhaltsverzeichnis?",
+    "options": [
+      "Kapitel 11",
+      "Kapitel 10",
+      "Kapitel 2"
+    ],
+    "a": 0,
+    "exp": "Im Inhaltsverzeichnis ist „Digitale Dienste und Services“ als Kapitel 11 aufgeführt."
+  },
+  {
+    "id": "toc_fire",
+    "topic": "Allgemeines",
+    "q": "Welches Kapitel behandelt „Brandmeldetechnik (Fire Safety)“ laut Inhaltsverzeichnis?",
+    "options": [
+      "Kapitel 3",
+      "Kapitel 8",
+      "Kapitel 12"
+    ],
+    "a": 0,
+    "exp": "Im Inhaltsverzeichnis ist „Brandmeldetechnik (Fire Safety)“ als Kapitel 3 aufgeführt."
+  },
+  {
+    "id": "doc_responsibility_issue",
+    "topic": "Allgemeines",
+    "q": "Wer trägt laut Leitfaden die Gesamtverantwortung für die Herausgabe des Dokuments?",
+    "options": [
+      "RC-DE SI B PIT DQM",
+      "Bid & Proposal Management (BPM)",
+      "Der jeweilige Kunde"
+    ],
+    "a": 0,
+    "exp": "Im Vorwort steht: Gesamtverantwortlich für die Herausgabe des Dokuments ist RC-DE SI B PIT DQM."
+  },
+  {
+    "id": "doc_feedback",
+    "topic": "Allgemeines",
+    "q": "Wohin sollen Anregungen und Ergänzungen laut Leitfaden gesendet werden?",
+    "options": [
+      "An RC-DE SI B PIT DQM Martin Heil per E-Mail",
+      "An das Service Desk Portal",
+      "An Findus Support"
+    ],
+    "a": 0,
+    "exp": "Im Vorwort: „Anregungen und Ergänzungen bitte an: RC-DE SI B PIT DQM Martin Heil …“"
+  },
+  {
+    "id": "usecase_mi",
+    "topic": "Allgemeines",
+    "q": "Wofür wird „Maintenance Information (MI)“ laut Leitfaden genutzt?",
+    "options": [
+      "Systeminfo und Einbauort in Verbindung mit Kundendaten über Equipment/Vertrag (z.B. Produktsicherheitsfälle)",
+      "Nur zur Farbkennzeichnung von Geräten",
+      "Ausschließlich zur Angebotskalkulation"
+    ],
+    "a": 0,
+    "exp": "Use Cases: MI liefert Systeminfo, Softwarekonfigurationen und Einbauort in Verbindung mit Kundendaten über Equipment/Vertrag, u.a. für Produktsicherheitsfälle."
+  }
+]
